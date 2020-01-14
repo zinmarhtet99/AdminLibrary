@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="0dp"
+        android:layout_height="300dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/book"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="-2dp" />
+
+    <TextView
+        android:id="@+id/txtview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text=""
+        android:textColor="#FF9800"
+        android:textSize="40sp"
+        android:textStyle="italic"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/borrowbook"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Borrow Book"
+        android:layout_marginTop="11dp"
+        android:layout_marginLeft="11dp"
+        android:layout_marginRight="11dp"
+        android:background="#1e90ff"
+        android:textColor="#ffffff"
+        app:layout_constraintTop_toBottomOf="@+id/image"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/returnbook"/>
+
+    <Button
+        android:id="@+id/returnbook"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Return Book"
+        android:background="#1e90ff"
+        android:textColor="#ffffff"
+        android:layout_marginTop="11dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="11dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/borrowbook"
+        app:layout_constraintLeft_toRightOf="@+id/borrowbook"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+    <Button
+        android:id="@+id/addbook"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Add Book"
+        android:background="#1e90ff"
+        android:textColor="#ffffff"
+        android:layout_marginTop="11dp"
+        android:layout_marginRight="11dp"
+        app:layout_constraintLeft_toLeftOf="@id/borrowbook"
+        app:layout_constraintTop_toBottomOf="@id/borrowbook"
+        app:layout_constraintRight_toLeftOf="@id/viewbook"
+
+        />
+
+    <Button
+        android:id="@+id/viewbook"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="View Book"
+        android:background="#1e90ff"
+        android:textColor="#ffffff"
+        android:layout_marginTop="11dp"
+        android:layout_marginLeft="11dp"
+        app:layout_constraintRight_toRightOf="@id/returnbook"
+        app:layout_constraintTop_toBottomOf="@id/borrowbook"
+        app:layout_constraintLeft_toRightOf="@id/addbook"/>
+
+    <Button
+        android:id="@+id/createidcard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#1e90ff"
+        android:text="Create Idcard"
+        android:textColor="#ffffff"
+        android:layout_marginTop="8dp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="@id/addbook"
+        app:layout_constraintRight_toRightOf="@id/addbook"
+        app:layout_constraintTop_toBottomOf="@id/addbook" />
+    <Button
+        android:id="@+id/memberlist"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Member List"
+        android:background="#1e90ff"
+        android:textColor="#ffffff"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/viewbook"
+        app:layout_constraintLeft_toLeftOf="@id/viewbook"
+        app:layout_constraintRight_toRightOf="@+id/viewbook"
+
+        />
+    <Button
+        android:id="@+id/borrowlist"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Borrow List"
+        android:background="#1e90ff"
+        android:textColor="#ffffff"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/createidcard"
+        app:layout_constraintLeft_toLeftOf="@id/createidcard"
+        app:layout_constraintRight_toRightOf="@+id/createidcard"
+
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
